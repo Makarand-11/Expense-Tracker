@@ -10,7 +10,7 @@ const expenseEmail = async () => {
         (acc, expense) => acc + expense.value, 0
     )
 
-    if (totalExpense > 10000) {
+    if (totalExpense > 30000) {
         let messageOption = {
             from: process.env.EMAIL,
             to: process.env.ADMIN_EMAIL,
@@ -21,3 +21,7 @@ const expenseEmail = async () => {
         await sendMail(messageOption);
     }
 }
+
+module.exports = {
+    expenseEmail,
+};
