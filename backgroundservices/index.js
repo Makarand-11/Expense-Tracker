@@ -2,7 +2,7 @@ const express = require("express");
 const cron = require("node-cron");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-const expenseEmail = require("./EmailService/Expense");
+const {expenseEmail} = require("./EmailService/Expense");
 
 const app = express();
 
